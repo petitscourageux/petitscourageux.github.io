@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Petits Courageux</title>
-  <meta name="description" content="Petits Courageux : un espace pour les parents d'enfants hospitalisés, pour raconter le courage de leur enfant.">
+  <meta name="description" content="Petits Courageux : pour aider les parents à expliquer à leur enfant, de façon ludique, comment va se passer son opération à l'hôpital.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -16,115 +16,229 @@
     <nav class="nav">
       <a href="#" class="logo">Petits Courageux</a>
       <div class="nav-links">
-        <a href="#projet">Le projet</a>
-        <a href="#galerie">Photos</a>
-        <a href="#raconter" class="btn btn-small">Raconter</a>
+        <a href="#histoire">L'histoire</a>
+        <a href="#parents">Parents</a>
+        <a href="#sac">Le sac</a>
+        <a href="#diplome" class="btn btn-small">Diplôme</a>
       </div>
     </nav>
     <div class="hero-content">
-      <p class="eyebrow">Pour les enfants de l'hôpital</p>
-      <h1>Chaque enfant hospitalisé est un petit courageux.</h1>
-      <p class="lead">Un espace pour les parents : racontez le courage de votre enfant, ses victoires, petites ou grandes.</p>
-      <a href="#raconter" class="btn">Raconter son histoire</a>
+      <p class="eyebrow">Pour les parents, à lire avec son enfant</p>
+      <h1>Une opération, c'est une aventure. Racontons-la ensemble.</h1>
+      <p class="lead">Asseyez-vous avec votre enfant et suivez, étape par étape, la journée d'un petit courageux à l'hôpital. Quand on sait ce qui va se passer, on a moins peur.</p>
+      <a href="#histoire" class="btn">Commencer l'histoire</a>
     </div>
   </header>
 
   <main>
-    <section id="projet" class="section">
-      <h2>Le projet</h2>
+    <!-- HISTOIRE INTERACTIVE -->
+    <section id="histoire" class="section">
+      <h2>La journée d'un petit courageux</h2>
+      <p class="section-intro">Lisez le texte à voix haute. Le petit encadré « Pour vous » est pour les parents.</p>
+
+      <div class="story" aria-live="polite">
+        <div class="progress" id="progress" role="tablist" aria-label="Étapes"></div>
+
+        <div class="story-card">
+          <div class="story-visual">
+            <span class="story-emoji" id="s-emoji" aria-hidden="true"></span>
+            <img id="s-img" alt="" hidden>
+          </div>
+          <div class="story-text">
+            <p class="step-label" id="s-label"></p>
+            <h3 id="s-title"></h3>
+            <p class="read-aloud" id="s-text"></p>
+            <details class="parent-tip">
+              <summary>Pour vous, parents</summary>
+              <p id="s-tip"></p>
+            </details>
+          </div>
+        </div>
+
+        <div class="story-nav">
+          <button class="btn btn-ghost" id="prev" type="button">← Avant</button>
+          <button class="btn" id="next" type="button">Après →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSEILS PARENTS -->
+    <section id="parents" class="section section-alt">
+      <h2>Pour les parents</h2>
+      <p class="section-intro">Quelques repères pour en parler avec votre enfant.</p>
       <div class="cards">
         <article class="card">
-          <span class="icon" aria-hidden="true">💛</span>
-          <h3>Mettre en lumière</h3>
-          <p>Les soins, les piqûres, les longues journées : nos enfants affrontent tout ça avec un courage immense. Il mérite d'être raconté.</p>
+          <span class="icon" aria-hidden="true">🗓️</span>
+          <h3>Quand en parler ?</h3>
+          <p>Pour les plus petits (3-5 ans), un ou deux jours avant suffisent. Les plus grands peuvent en parler une semaine avant et poser leurs questions au fil des jours.</p>
         </article>
         <article class="card">
-          <span class="icon" aria-hidden="true">✍️</span>
-          <h3>Donner la parole aux parents</h3>
-          <p>Vous connaissez mieux que personne votre enfant. Décrivez-le, avec vos mots : son caractère, ce qui le fait rire, ce qui l'aide à tenir.</p>
+          <span class="icon" aria-hidden="true">🙌</span>
+          <h3>Dire la vérité, avec douceur</h3>
+          <p>Ne promettez pas « ça ne fera pas mal ». Dites plutôt : « Ça peut faire un peu mal, et les soignants ont des médicaments pour t'aider. »</p>
         </article>
         <article class="card">
-          <span class="icon" aria-hidden="true">🤝</span>
-          <h3>Se sentir moins seuls</h3>
-          <p>Lire l'histoire d'autres familles, c'est savoir qu'on n'est pas seul dans cette épreuve.</p>
+          <span class="icon" aria-hidden="true">🧸</span>
+          <h3>Jouer pour comprendre</h3>
+          <p>Faites « opérer » le doudou : un bracelet, un masque, un pansement. En jouant le rôle du docteur, l'enfant apprivoise ce qui l'attend.</p>
         </article>
       </div>
-    </section>
 
-    <section id="galerie" class="section section-alt">
-      <h2>Nos petits courageux</h2>
-      <p class="section-intro">Quelques images du projet.</p>
-      <div class="gallery">
-        <!-- Remplacer chaque bloc par : <figure><img src="images/photo1.jpg" alt="Description"><figcaption>Légende</figcaption></figure> -->
-        <figure class="placeholder"><span>Photo 1</span></figure>
-        <figure class="placeholder"><span>Photo 2</span></figure>
-        <figure class="placeholder"><span>Photo 3</span></figure>
-        <figure class="placeholder"><span>Photo 4</span></figure>
-        <figure class="placeholder"><span>Photo 5</span></figure>
-        <figure class="placeholder"><span>Photo 6</span></figure>
-      </div>
-    </section>
-
-    <section id="raconter" class="section">
-      <h2>Racontez son histoire</h2>
-      <p class="section-intro">Remplissez ce formulaire : il prépare un e-mail avec votre texte, que vous envoyez depuis votre messagerie. Rien n'est enregistré sur ce site.</p>
-
-      <form id="story-form" class="form" novalidate>
-        <div class="row">
-          <label>Prénom de l'enfant (ou surnom)
-            <input type="text" name="prenom" required maxlength="60">
-          </label>
-          <label>Âge
-            <input type="text" name="age" maxlength="20" placeholder="ex. 6 ans">
-          </label>
+      <div class="words">
+        <h3>Les mots qui rassurent</h3>
+        <div class="words-grid">
+          <div class="words-col avoid">
+            <p class="words-head">Plutôt éviter</p>
+            <ul>
+              <li>« On va t'endormir » (comme un animal qu'on endort)</li>
+              <li>« On va te couper »</li>
+              <li>« Une piqûre »</li>
+              <li>« Ce n'est rien, ne pleure pas »</li>
+            </ul>
+          </div>
+          <div class="words-col use">
+            <p class="words-head">Plutôt dire</p>
+            <ul>
+              <li>« Tu vas faire un sommeil spécial, et tu te réveilleras après »</li>
+              <li>« Le docteur va réparer… »</li>
+              <li>« Un petit tuyau très fin dans la main »</li>
+              <li>« Tu as le droit d'avoir peur, je suis là »</li>
+            </ul>
+          </div>
         </div>
-        <label>Votre prénom et votre lien avec l'enfant
-          <input type="text" name="parent" required maxlength="80" placeholder="ex. Julie, sa maman">
-        </label>
-        <label>Décrivez votre petit courageux
-          <textarea name="histoire" rows="7" required placeholder="Son caractère, ce qu'il aime, un moment où il vous a impressionné…"></textarea>
-        </label>
-        <label>Un message pour les autres familles (facultatif)
-          <textarea name="message" rows="3"></textarea>
-        </label>
-        <label class="check">
-          <input type="checkbox" name="accord" required>
-          <span>J'autorise la publication de ce texte sur Petits Courageux. Je peux demander son retrait à tout moment.</span>
-        </label>
-        <p class="note">Merci de ne pas indiquer de nom de famille, d'adresse ni de détail médical que vous ne souhaitez pas rendre public. Pour une photo, joignez-la directement à l'e-mail.</p>
-        <p id="form-error" class="error" role="alert" hidden>Merci de remplir les champs obligatoires et de cocher l'autorisation.</p>
-        <button type="submit" class="btn">Préparer l'e-mail</button>
-      </form>
+      </div>
+      <p class="disclaimer">Chaque hôpital et chaque intervention sont différents. N'hésitez pas à demander à l'équipe soignante comment se passera précisément la journée de votre enfant.</p>
+    </section>
+
+    <!-- SAC -->
+    <section id="sac" class="section">
+      <h2>Mon sac de petit courageux</h2>
+      <p class="section-intro">À préparer ensemble. Cochez au fur et à mesure !</p>
+      <ul class="checklist" id="checklist">
+        <li><label><input type="checkbox"> 🧸 Mon doudou (on peut l'emmener jusqu'au bloc)</label></li>
+        <li><label><input type="checkbox"> 🩳 Un pyjama confortable</label></li>
+        <li><label><input type="checkbox"> 🧦 Des chaussons</label></li>
+        <li><label><input type="checkbox"> 📚 Un livre ou une BD</label></li>
+        <li><label><input type="checkbox"> 🎧 De la musique ou une histoire à écouter</label></li>
+        <li><label><input type="checkbox"> 🖍️ Des crayons et un cahier</label></li>
+        <li><label><input type="checkbox"> 🪥 Ma brosse à dents</label></li>
+        <li><label><input type="checkbox"> 📋 Les papiers de l'hôpital (pour papa ou maman)</label></li>
+      </ul>
+      <p class="check-count" id="check-count"></p>
+    </section>
+
+    <!-- DIPLOME -->
+    <section id="diplome" class="section section-alt">
+      <h2>Le diplôme du courage</h2>
+      <p class="section-intro">Après l'opération, chaque petit courageux mérite son diplôme. Écrivez son prénom, puis imprimez-le !</p>
+      <div class="diploma-form no-print">
+        <label for="d-name">Prénom de l'enfant</label>
+        <input type="text" id="d-name" maxlength="30" placeholder="ex. Léo">
+        <button class="btn" type="button" id="print">Imprimer le diplôme</button>
+      </div>
+      <div class="diploma" id="diploma-card">
+        <p class="diploma-stars" aria-hidden="true">⭐ ⭐ ⭐</p>
+        <p class="diploma-title">Diplôme du Petit Courageux</p>
+        <p>est décerné à</p>
+        <p class="diploma-name" id="d-out">…</p>
+        <p>pour avoir été très, très courageux à l'hôpital.</p>
+        <p class="diploma-medal" aria-hidden="true">🏅</p>
+        <p class="diploma-date" id="d-date"></p>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>Petits Courageux · Pour les enfants de l'hôpital et leurs familles</p>
+  <footer class="footer no-print">
+    <p>Petits Courageux · Pour les enfants de l'hôpital et leurs parents</p>
+    <p class="small">Ce site ne remplace pas les informations données par l'équipe médicale.</p>
   </footer>
 
   <script>
-    // TODO : remplacer par l'adresse de contact du projet
-    const CONTACT_EMAIL = "contact@exemple.fr";
+    // Pour ajouter une photo à une étape : déposer le fichier dans images/ avec le nom indiqué (img).
+    const STEPS = [
+      { emoji: "🏥", img: "images/etape-1.jpg", title: "On arrive à l'hôpital",
+        text: "Aujourd'hui, c'est le grand jour ! Avec papa ou maman, tu arrives à l'hôpital. On te donne un bracelet avec ton prénom, comme un super-héros qui a son badge.",
+        tip: "Souvent, l'enfant doit être « à jeun » (ne rien manger ni boire depuis quelques heures). Expliquez-lui que c'est pour que son ventre soit bien tranquille pendant le sommeil spécial." },
+      { emoji: "🛏️", img: "images/etape-2.jpg", title: "Ma chambre et mon habit",
+        text: "Tu découvres ta chambre, avec un lit qui monte et qui descend ! Tu mets un habit spécial de l'hôpital. Ton doudou, lui, reste avec toi.",
+        tip: "Vérifiez si l'enfant peut garder son doudou jusqu'au bloc : c'est très souvent possible, et rassurant." },
+      { emoji: "👩‍⚕️", img: "images/etape-3.jpg", title: "Les gentils soignants",
+        text: "Des infirmières, des infirmiers et des docteurs viennent te dire bonjour. Ils ont des blouses, parfois des bonnets rigolos. Tu peux leur poser toutes tes questions !",
+        tip: "Encouragez votre enfant à poser ses questions lui-même. Les soignants ont l'habitude et adaptent leurs mots." },
+      { emoji: "🚗", img: "images/etape-4.jpg", title: "En route vers la salle d'opération",
+        text: "C'est l'heure ! Tu pars en balade dans ton lit à roulettes, parfois même dans une petite voiture. Papa ou maman t'accompagne le plus loin possible.",
+        tip: "Selon l'hôpital, un parent peut accompagner l'enfant jusqu'à l'entrée du bloc, parfois jusqu'à l'endormissement. Demandez-le à l'avance." },
+      { emoji: "😷", img: "images/etape-5.jpg", title: "Le masque du sommeil magique",
+        text: "Dans la salle, il y a plein de lumières et de machines qui font « bip ». Le docteur du sommeil te met un masque qui sent parfois la fraise. Tu respires tranquillement… et tu fais un sommeil très spécial.",
+        tip: "Chez l'enfant, l'anesthésie commence souvent par un masque, le petit tuyau (perfusion) étant posé une fois endormi. Le docteur anesthésiste vous expliquera comment ça se passe pour votre enfant." },
+      { emoji: "🔧", img: "images/etape-6.jpg", title: "Pendant que tu dors",
+        text: "Pendant ton sommeil spécial, tu ne sens rien et tu ne te réveilles pas. Le docteur répare ce qu'il faut réparer. Les soignants veillent sur toi tout le temps.",
+        tip: "Insistez : on ne se réveille pas pendant l'opération, et on ne sent rien. C'est une peur fréquente chez les enfants." },
+      { emoji: "🌅", img: "images/etape-7.jpg", title: "Je me réveille",
+        text: "Tu ouvres les yeux dans une salle de réveil. Tu as peut-être un pansement et un petit tuyau très fin dans la main. Tu peux te sentir un peu bizarre, c'est normal. Papa ou maman arrive vite !",
+        tip: "Prévenez l'enfant qu'il pourra avoir un pansement, un peu mal ou la gorge sèche, et que c'est normal. Les soignants ont des médicaments pour soulager." },
+      { emoji: "🏠", img: "images/etape-8.jpg", title: "Bravo, petit courageux !",
+        text: "Tu as été super courageux ! Tu te reposes, tu manges un petit goûter, et bientôt, c'est le retour à la maison. Tu as bien mérité ton diplôme !",
+        tip: "Valorisez son courage, même s'il a pleuré : avoir peur et y aller quand même, c'est ça, être courageux." }
+    ];
 
-    document.getElementById("story-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const f = e.target;
-      const err = document.getElementById("form-error");
-      if (!f.checkValidity()) { err.hidden = false; return; }
-      err.hidden = true;
-      const v = (n) => f.elements[n].value.trim();
-      const body =
-        "Prénom de l'enfant : " + v("prenom") + "\n" +
-        "Âge : " + v("age") + "\n" +
-        "Écrit par : " + v("parent") + "\n\n" +
-        "Son histoire :\n" + v("histoire") + "\n\n" +
-        (v("message") ? "Message aux familles :\n" + v("message") + "\n\n" : "") +
-        "J'autorise la publication de ce texte sur Petits Courageux.";
-      const subject = "Petit courageux : " + v("prenom");
-      window.location.href = "mailto:" + CONTACT_EMAIL +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+    let i = 0;
+    const $ = (id) => document.getElementById(id);
+    const progress = $("progress");
+    STEPS.forEach((s, n) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "dot";
+      b.setAttribute("aria-label", "Étape " + (n + 1) + " : " + s.title);
+      b.textContent = n + 1;
+      b.onclick = () => show(n);
+      progress.appendChild(b);
     });
+
+    function show(n) {
+      i = Math.max(0, Math.min(STEPS.length - 1, n));
+      const s = STEPS[i];
+      $("s-emoji").textContent = s.emoji;
+      const img = $("s-img");
+      img.hidden = true;
+      img.onload = () => { img.hidden = false; };
+      img.onerror = () => { img.hidden = true; };
+      img.src = s.img;
+      $("s-label").textContent = "Étape " + (i + 1) + " sur " + STEPS.length;
+      $("s-title").textContent = s.title;
+      $("s-text").textContent = s.text;
+      $("s-tip").textContent = s.tip;
+      [...progress.children].forEach((d, k) => {
+        d.classList.toggle("active", k === i);
+        d.classList.toggle("done", k < i);
+      });
+      $("prev").disabled = i === 0;
+      $("next").textContent = i === STEPS.length - 1 ? "Mon diplôme 🏅" : "Après →";
+    }
+    $("prev").onclick = () => show(i - 1);
+    $("next").onclick = () => {
+      if (i === STEPS.length - 1) location.hash = "diplome";
+      else show(i + 1);
+    };
+    show(0);
+
+    // Checklist (mémorisée dans ce navigateur)
+    const boxes = [...document.querySelectorAll("#checklist input")];
+    let saved = [];
+    try { saved = JSON.parse(localStorage.getItem("pc-sac") || "[]"); } catch (e) {}
+    boxes.forEach((b, k) => { b.checked = !!saved[k]; b.onchange = updateCount; });
+    function updateCount() {
+      const n = boxes.filter(b => b.checked).length;
+      $("check-count").textContent = n === boxes.length ? "🎉 Le sac est prêt !" : n + " / " + boxes.length + " dans le sac";
+      try { localStorage.setItem("pc-sac", JSON.stringify(boxes.map(b => b.checked))); } catch (e) {}
+    }
+    updateCount();
+
+    // Diplôme
+    $("d-date").textContent = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+    $("d-name").oninput = (e) => { $("d-out").textContent = e.target.value.trim() || "…"; };
+    $("print").onclick = () => { document.body.classList.add("printing-diploma"); window.print(); };
+    window.addEventListener("afterprint", () => document.body.classList.remove("printing-diploma"));
   </script>
 </body>
 </html>
