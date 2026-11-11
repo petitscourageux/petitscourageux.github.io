@@ -78,3 +78,10 @@ footer{background:linear-gradient(90deg,var(--c3),var(--c5));border-top:none}
 footer .wrap{color:var(--ink)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) article h2{color:#b9a8ff}}
 :root[data-theme="dark"] article h2{color:#b9a8ff}
+
+/* --- Sélecteur de langue FR / ES --- */
+.lang{margin-left:auto;display:flex;gap:4px;font-family:var(--display);font-weight:600;font-size:.9rem}
+.lang a,.lang span{padding:4px 10px;border-radius:999px;text-decoration:none;color:var(--ink)}
+.lang a{background:var(--surface)}
+.lang a:hover,.lang a:focus-visible{background:var(--sun);color:#1d2a44}
+.lang span[aria-current]{background:var(--ink);color:var(--bg)}

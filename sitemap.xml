@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lespetitscourageux.fr/</loc></url>
+  <url><loc>https://lespetitscourageux.fr/es/</loc></url>
   <url><loc>https://lespetitscourageux.fr/prise-de-sang/</loc></url>
+  <url><loc>https://lespetitscourageux.fr/es/analisis-de-sangre/</loc></url>
   <url><loc>https://lespetitscourageux.fr/operation/</loc></url>
+  <url><loc>https://lespetitscourageux.fr/es/operacion/</loc></url>
   <url><loc>https://lespetitscourageux.fr/anesthesie/</loc></url>
+  <url><loc>https://lespetitscourageux.fr/es/anestesia/</loc></url>
   <url><loc>https://lespetitscourageux.fr/valise/</loc></url>
+  <url><loc>https://lespetitscourageux.fr/es/maleta/</loc></url>
   <url><loc>https://lespetitscourageux.fr/rassurer/</loc></url>
+  <url><loc>https://lespetitscourageux.fr/es/tranquilizar/</loc></url>
 </urlset>
