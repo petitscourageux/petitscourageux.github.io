@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Petits Courageux</title>
+  <meta name="description" content="Petits Courageux : un espace pour les parents d'enfants hospitalisés, pour raconter le courage de leur enfant.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="nav">
+      <a href="#" class="logo">Petits Courageux</a>
+      <div class="nav-links">
+        <a href="#projet">Le projet</a>
+        <a href="#galerie">Photos</a>
+        <a href="#raconter" class="btn btn-small">Raconter</a>
+      </div>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">Pour les enfants de l'hôpital</p>
+      <h1>Chaque enfant hospitalisé est un petit courageux.</h1>
+      <p class="lead">Un espace pour les parents : racontez le courage de votre enfant, ses victoires, petites ou grandes.</p>
+      <a href="#raconter" class="btn">Raconter son histoire</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="projet" class="section">
+      <h2>Le projet</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="icon" aria-hidden="true">💛</span>
+          <h3>Mettre en lumière</h3>
+          <p>Les soins, les piqûres, les longues journées : nos enfants affrontent tout ça avec un courage immense. Il mérite d'être raconté.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">✍️</span>
+          <h3>Donner la parole aux parents</h3>
+          <p>Vous connaissez mieux que personne votre enfant. Décrivez-le, avec vos mots : son caractère, ce qui le fait rire, ce qui l'aide à tenir.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">🤝</span>
+          <h3>Se sentir moins seuls</h3>
+          <p>Lire l'histoire d'autres familles, c'est savoir qu'on n'est pas seul dans cette épreuve.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galerie" class="section section-alt">
+      <h2>Nos petits courageux</h2>
+      <p class="section-intro">Quelques images du projet.</p>
+      <div class="gallery">
+        <!-- Remplacer chaque bloc par : <figure><img src="images/photo1.jpg" alt="Description"><figcaption>Légende</figcaption></figure> -->
+        <figure class="placeholder"><span>Photo 1</span></figure>
+        <figure class="placeholder"><span>Photo 2</span></figure>
+        <figure class="placeholder"><span>Photo 3</span></figure>
+        <figure class="placeholder"><span>Photo 4</span></figure>
+        <figure class="placeholder"><span>Photo 5</span></figure>
+        <figure class="placeholder"><span>Photo 6</span></figure>
+      </div>
+    </section>
+
+    <section id="raconter" class="section">
+      <h2>Racontez son histoire</h2>
+      <p class="section-intro">Remplissez ce formulaire : il prépare un e-mail avec votre texte, que vous envoyez depuis votre messagerie. Rien n'est enregistré sur ce site.</p>
+
+      <form id="story-form" class="form" novalidate>
+        <div class="row">
+          <label>Prénom de l'enfant (ou surnom)
+            <input type="text" name="prenom" required maxlength="60">
+          </label>
+          <label>Âge
+            <input type="text" name="age" maxlength="20" placeholder="ex. 6 ans">
+          </label>
+        </div>
+        <label>Votre prénom et votre lien avec l'enfant
+          <input type="text" name="parent" required maxlength="80" placeholder="ex. Julie, sa maman">
+        </label>
+        <label>Décrivez votre petit courageux
+          <textarea name="histoire" rows="7" required placeholder="Son caractère, ce qu'il aime, un moment où il vous a impressionné…"></textarea>
+        </label>
+        <label>Un message pour les autres familles (facultatif)
+          <textarea name="message" rows="3"></textarea>
+        </label>
+        <label class="check">
+          <input type="checkbox" name="accord" required>
+          <span>J'autorise la publication de ce texte sur Petits Courageux. Je peux demander son retrait à tout moment.</span>
+        </label>
+        <p class="note">Merci de ne pas indiquer de nom de famille, d'adresse ni de détail médical que vous ne souhaitez pas rendre public. Pour une photo, joignez-la directement à l'e-mail.</p>
+        <p id="form-error" class="error" role="alert" hidden>Merci de remplir les champs obligatoires et de cocher l'autorisation.</p>
+        <button type="submit" class="btn">Préparer l'e-mail</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Petits Courageux · Pour les enfants de l'hôpital et leurs familles</p>
+  </footer>
+
+  <script>
+    // TODO : remplacer par l'adresse de contact du projet
+    const CONTACT_EMAIL = "contact@exemple.fr";
+
+    document.getElementById("story-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const f = e.target;
+      const err = document.getElementById("form-error");
+      if (!f.checkValidity()) { err.hidden = false; return; }
+      err.hidden = true;
+      const v = (n) => f.elements[n].value.trim();
+      const body =
+        "Prénom de l'enfant : " + v("prenom") + "\n" +
+        "Âge : " + v("age") + "\n" +
+        "Écrit par : " + v("parent") + "\n\n" +
+        "Son histoire :\n" + v("histoire") + "\n\n" +
+        (v("message") ? "Message aux familles :\n" + v("message") + "\n\n" : "") +
+        "J'autorise la publication de ce texte sur Petits Courageux.";
+      const subject = "Petit courageux : " + v("prenom");
+      window.location.href = "mailto:" + CONTACT_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
