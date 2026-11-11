@@ -47,3 +47,34 @@ footer{border-top:1px solid var(--line);background:var(--surface)}
 footer .wrap{padding-block:18px;font-size:.88rem;color:var(--muted)}
 a{color:inherit}
 @media (prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+
+/* --- Plus de couleur --- */
+:root{--c1:#ffd9e2;--c2:#d6f0dd;--c3:#e3dcff;--c4:#ffe7c2;--c5:#cfeefa;--pink:#e85d8a;--green:#2f9a5b;--violet:#7a5cf0;--orange:#f08a24;--blue:#2a8fd0}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--c1:#4a2533;--c2:#1f3d2b;--c3:#2f2752;--c4:#4a3518;--c5:#183a4a}}
+:root[data-theme="dark"]{--c1:#4a2533;--c2:#1f3d2b;--c3:#2f2752;--c4:#4a3518;--c5:#183a4a}
+body{background:linear-gradient(180deg,var(--bg) 0%,var(--c4) 160%) fixed}
+header.top{background:linear-gradient(90deg,var(--c1),var(--c4),var(--c2),var(--c5),var(--c3));border-bottom:none}
+.hero{background:linear-gradient(135deg,var(--c5) 0%,var(--c3) 50%,var(--c1) 100%);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:var(--sun);opacity:.35}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{color:var(--ink)}
+.eyebrow{display:inline-block;justify-self:start;background:var(--sun);color:#1d2a44;padding:3px 12px;border-radius:999px}
+.card{border:none;border-top:6px solid var(--blue);box-shadow:0 2px 0 rgba(29,42,68,.06)}
+.card:nth-child(1){background:var(--c1);border-top-color:var(--pink)}
+.card:nth-child(2){background:var(--c2);border-top-color:var(--green)}
+.card:nth-child(3){background:var(--c3);border-top-color:var(--violet)}
+.card:nth-child(4){background:var(--c4);border-top-color:var(--orange)}
+.card:nth-child(5){background:var(--c5);border-top-color:var(--blue)}
+.card p{color:var(--ink);opacity:.8}
+.card .age{color:var(--ink)}
+.card:hover,.card:focus-visible{transform:translateY(-2px)}
+@media (prefers-reduced-motion:no-preference){.card{transition:transform .15s}}
+article h2{color:var(--violet);padding-left:12px;border-left:5px solid var(--pink);border-radius:2px}
+article li::marker{color:var(--orange);font-weight:700}
+.say{background:var(--c2);border-left-color:var(--green)}
+.cta{background:linear-gradient(135deg,var(--sun),#ff9f6b)}
+.cta a{background:var(--pink)}
+footer{background:linear-gradient(90deg,var(--c3),var(--c5));border-top:none}
+footer .wrap{color:var(--ink)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) article h2{color:#b9a8ff}}
+:root[data-theme="dark"] article h2{color:#b9a8ff}
